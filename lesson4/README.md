@@ -20,6 +20,7 @@
 1. Создание класса (user.py , lesson_3_task_1.py)
 2. Список объектов (smartphone.py , lesson_3_task_2.py)
 3. Вложенные классы (Address.py , Mailing.py , lesson_3_task_3.py)
+
 Домашняя работа lesson4 от 19.10.25
 1. Сохранить данные в файл (string_utils.py)
 2. Файл тестов (test_string_utils.py)
