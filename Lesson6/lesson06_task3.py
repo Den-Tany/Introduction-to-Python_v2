@@ -9,6 +9,7 @@ from webdriver_manager.chrome import ChromeDriverManager
 from selenium.webdriver.firefox.service import Service as FirefoxService
 from webdriver_manager.firefox import GeckoDriverManager
 
+#<Запуск браузера>
 browser = input("Выбери браузер: (1-Chrom, 2-Firefox) - ")
 while browser not in ['1', '2']:
     print("Ошибка! Нужно выбрать '1' или '2'")
@@ -19,9 +20,8 @@ def select_browser(browser):
     elif browser == '2':
         return webdriver.Firefox(service=FirefoxService(GeckoDriverManager().install()))       
 driver = select_browser(browser)
-
-# driver.implicitly_wait(16)
-
+#</Запуск браузера>
+#<Урок>
 driver.get("https://bonigarcia.dev/selenium-webdriver-java/loading-images.html")
 element = WebDriverWait (driver, 20).until(
     EC.text_to_be_present_in_element((By.CSS_SELECTOR, 'p#text.lead'),'Done!'))
@@ -29,3 +29,4 @@ waiting_picture = driver.find_element(By.CSS_SELECTOR, "img#award").get_attribut
 
 print(waiting_picture)
 driver.quit()
+#</Урок>
