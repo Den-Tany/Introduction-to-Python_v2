@@ -16,7 +16,7 @@
 6. Фильтрация списка (lesson_2_task_6.py)
 7. Range (lesson_2_task_7.py)
 
-Домашняя работа lesson2 от 09.10.25
+Домашняя работа lesson3 от 09.10.25
 1. Создание класса (user.py , lesson_3_task_1.py)
 2. Список объектов (smartphone.py , lesson_3_task_2.py)
 3. Вложенные классы (Address.py , Mailing.py , lesson_3_task_3.py)

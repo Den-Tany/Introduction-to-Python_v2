@@ -5,7 +5,6 @@ from selenium.webdriver.firefox.service import Service as FirefoxService
 from webdriver_manager.firefox import GeckoDriverManager
 from shop_03 import Shop
 
-
 @pytest.fixture(scope="session")
 def browser():
     driver = webdriver.Firefox(service=FirefoxService(GeckoDriverManager().install()))
@@ -23,3 +22,4 @@ def test_time_wait(browser, result):           # Передали browser чер
     total_coast = shop.total_cost()
     
     assert result == total_coast
+
