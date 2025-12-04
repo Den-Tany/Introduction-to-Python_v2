@@ -10,5 +10,7 @@ class bro_Firefox:
         Запуск утилиты webdriver.
         Установка драйвера Firefox
         """
-        driver = webdriver.Firefox(service=FirefoxService(GeckoDriverManager().install()))
+        driver = webdriver.Firefox(
+            service=FirefoxService(GeckoDriverManager().install())
+            )
         return driver

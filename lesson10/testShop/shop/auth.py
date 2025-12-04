@@ -29,12 +29,15 @@ class Auth:
         """
         # Авторизация
         with allure.step(f"Ввод логина '{self.Username}'"):
-            field_UserName = self.driver.find_element(By.CSS_SELECTOR, 'input.input_error.form_input#user-name')
+            H = 'input.input_error.form_input#user-name'
+            field_UserName = self.driver.find_element(By.CSS_SELECTOR, H)
             field_UserName.send_keys(self.Username)
 
         with allure.step(f"Ввод пароля '{self.Password}'"):
-            field_Password = self.driver.find_element(By.CSS_SELECTOR, 'input.input_error.form_input#password')
+            L = 'input.input_error.form_input#password'
+            field_Password = self.driver.find_element(By.CSS_SELECTOR, L)
             field_Password.send_keys(self.Password)
 
-        with allure.step(f"Нажать кнопку \"Login\""):
-            self.driver.find_element(By.CSS_SELECTOR, 'input.submit-button.btn_action#login-button').click()
+        with allure.step("Нажать кнопку \"Login\""):
+            K = 'input.submit-button.btn_action#login-button'
+            self.driver.find_element(By.CSS_SELECTOR, K).click()

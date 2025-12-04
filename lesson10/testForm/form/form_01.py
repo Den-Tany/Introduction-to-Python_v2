@@ -32,7 +32,8 @@ class Page:
             Поиск и нажатие на кнопку Submit
         """
         with allure.step("Ищем кнопку Submit"):
-            search_buttot = self.driver.find_element(By.CSS_SELECTOR, "button.btn.btn-outline-primary.mt-3")
+            M = "button.btn.btn-outline-primary.mt-3"
+            search_buttot = self.driver.find_element(By.CSS_SELECTOR, M)
         with allure.step("Перематываем страницу вниз"):
             ActionChains(self.driver).move_to_element(search_buttot).perform()
         with allure.step("Нажимаем на кнопку"):
@@ -50,6 +51,7 @@ class Page:
             color_list = []
             for locator in self.data:
                 loc = f"div#{locator[0]}"
-                seach_color = self.driver.find_element(By.CSS_SELECTOR, loc).value_of_css_property("color")
+                seach_color = self.driver.find_element(
+                    By.CSS_SELECTOR, loc).value_of_css_property("color")
                 color_list.append(seach_color)
             return color_list

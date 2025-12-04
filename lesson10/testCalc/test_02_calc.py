@@ -15,17 +15,19 @@ def test_openBrowser():
     with allure.step("Закрытие браузера \"Chrome\""):
         driver.quit()
 
-@allure.title("""Aвтотест для проверки функциональности калькулятора 
-              на сайте https://bonigarcia.dev/selenium-webdriver-java/slow-calculator.html, 
+
+@allure.title("""Aвтотест для проверки функциональности калькулятора
+              на сайте
+              https://bonigarcia.dev/selenium-webdriver-java/slow-calculator.html,
               используя браузер Google Chrome.""")
 @allure.description("""
 Написать тест для выполнения следующих действий:
 Открыть страницу калькулятора.
-Ввести значение 
+Ввести значение
 45 в поле задержки.
-Нажать кнопки: 
+Нажать кнопки:
 7, +, 8, =.
-Проверить (assert), что в окне отобразится результат 
+Проверить (assert), что в окне отобразится результат
 15 через 45 секунд.
                     """)
 @allure.severity(Severity.MINOR)

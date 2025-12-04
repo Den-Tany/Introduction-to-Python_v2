@@ -15,6 +15,7 @@ firstName = 'Den'
 lastName = 'Tany'
 ZipCode = '689000'
 
+
 @allure.title("Загрузка и закрытие браузера")
 @pytest.fixture(scope='module')
 def test_openBrowser():
@@ -25,11 +26,14 @@ def test_openBrowser():
     with allure.step("Закрытие браузера Firefox"):
         driver.quit()
 
-@allure.title("""Автотест для проверки функциональности интернет-магазина 
-              на сайте https://www.saucedemo.com/, используя паттерн Page Object
+
+@allure.title("""Автотест для проверки функциональности интернет-магазина
+              на сайте https://www.saucedemo.com/,
+              используя паттерн Page Object
               и браузер FireFox.""")
 @allure.description("""
-                    Написать тест, который использует PageObject для выполнения следующих действий:
+Написать тест, который использует PageObject
+для выполнения следующих действий:
 Открыть сайт магазина.
 Авторизоваться как пользователь standard_user.
 Добавить в корзину товары:

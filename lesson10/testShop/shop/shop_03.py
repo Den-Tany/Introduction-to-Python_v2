@@ -13,7 +13,11 @@ class Shop:
         """
             Читаем со страницы итоговую стоимость (Total)
         """
-        total_cost_element = self.driver.find_element(By.XPATH, "//div[@class='summary_total_label' and @data-test='total-label']")
+        total_cost_element = self.driver.find_element(
+            By.XPATH, "//div[@class='summary_total_label' "
+            "and @data-test='total-label']"
+            )
         text = total_cost_element.text
-        price = text.split(':')[-1].strip()  # Отсекаем слово "Total:" и получаем чистую стоимость
+        # Отсекаем слово "Total:" и получаем чистую стоимость
+        price = text.split(':')[-1].strip()
         return price

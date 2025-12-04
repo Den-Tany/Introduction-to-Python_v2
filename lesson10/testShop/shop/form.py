@@ -19,18 +19,32 @@ class Form:
         Индекс
         """
         # Заполнение формы
-        with allure.step(f"Ввод значения '{self.firstName}' в поле \"firstName\""):
-            field_firstName = self.driver.find_element(By.CSS_SELECTOR, 'input#first-name')
+        with allure.step(
+            f"Ввод значения '{self.firstName}' в поле \"firstName\""
+                ):
+            field_firstName = self.driver.find_element(
+                By.CSS_SELECTOR, 'input#first-name'
+                )
             field_firstName.send_keys(self.firstName)
 
-        with allure.step(f"Ввод значения '{self.lastName}' в поле \"lastName\""):
-            field_lastName = self.driver.find_element(By.CSS_SELECTOR, 'input#last-name')
+        with allure.step(
+            f"Ввод значения '{self.lastName}' в поле \"lastName\""
+                ):
+            field_lastName = self.driver.find_element(
+                By.CSS_SELECTOR, 'input#last-name'
+                )
             field_lastName.send_keys(self.lastName)
 
-        with allure.step(f"Ввод значения '{self.ZipCode}' в поле \"self.ZipCode\""):
-            field_ZipCode = self.driver.find_element(By.CSS_SELECTOR, 'input#postal-code')
+        with allure.step(
+            f"Ввод значения '{self.ZipCode}' в поле \"self.ZipCode\""
+                ):
+            field_ZipCode = self.driver.find_element(
+                By.CSS_SELECTOR, 'input#postal-code'
+                )
             field_ZipCode.send_keys(self.ZipCode)
 
-        with allure.step(f"Нажать кнопку продолжить"):
-            button_continue = self.driver.find_element(By.CSS_SELECTOR, 'input#continue')
+        with allure.step("Нажать кнопку продолжить"):
+            button_continue = self.driver.find_element(
+                By.CSS_SELECTOR, 'input#continue'
+                )
             button_continue.click()
